@@ -4,6 +4,8 @@ import AddPost from "./components/AddPost"
 import Home from "./components/Home"
 import { Routes, Route, Link } from "react-router-dom"
 import Capital from "./components/Capital"
+import Activities from "./components/Activities"
+
 
 function App() {
 
@@ -11,7 +13,8 @@ function App() {
     <div>
       <nav className="navbar">
         <div>
-          <Link to="/">Home</Link>
+          <Link to="/">Home</Link> 
+          {/* link to other page */}
         </div>
         
         <div>
@@ -21,12 +24,22 @@ function App() {
         <div>
           <Link to="/addpost">Add Post</Link>
         </div>
+
+          {/* activities link below 这跟我用button有什么区别呢*/}
+        <div>
+          <Link to="/activities">Activities</Link>
+        </div>
+
       </nav>
-      <Routes>
+      <Routes>  
+        {/* use this file as parent file/routes */}
         <Route path="/" element={<Home/>} />
+        {/* child file 导入什么嘞具体是，和home文件有什么区别只是区分文章和nav吗*/}
         <Route path="/capitals" element={<Capitals/>} />
         <Route path="/capitals/:id" element={<Capital/>} />
         <Route path="/addpost" element={<AddPost/>} />
+        <Route path="/activities" element={<Activities/>} />
+        
       </Routes>
       <footer>
         <p>Eurocapi, 2023.</p>

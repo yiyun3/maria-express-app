@@ -6,6 +6,10 @@ const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//new router here
+var actRouter = require('./routes/activity');
+
+
 
 var app = express();
 
@@ -18,5 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/capitals', indexRouter);
 app.use('/api/users', usersRouter);
+//new router here
+app.use('./api/activity', actRouter);
 
 module.exports = app;

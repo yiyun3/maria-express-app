@@ -20,6 +20,7 @@ con.connect(function(err) {
   console.log("Connected!");
 
   let sql = fs.readFileSync(__dirname + "/init_db.sql").toString();
+ 
   con.query(sql, function(err, result) {
     if (err) throw err;
     console.log("Table creation was successful!");

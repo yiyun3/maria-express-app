@@ -4,7 +4,7 @@ USE eurocapi;
 
 DROP TABLE if exists post;
 DROP TABLE if exists user;
-DROP TABLE if exists capital;
+DROP TABLE if exists capital; 
 
 CREATE TABLE user(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -27,7 +27,7 @@ CREATE TABLE capital(
     `description_subtitle_2` VARCHAR(100) NOT NULL,
     `description_text_2` LONGTEXT NOT NULL,
     `description_subtitle_3` VARCHAR(100) NOT NULL,
-    `description_text_3` LONGTEXT NOT NULL,
+    `description_text_3` LONGTEXT NOT NULL
 );
 CREATE TABLE post(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,10 +38,28 @@ CREATE TABLE post(
     `local` TINYINT(1) NOT NULL,
     `date` DATE NOT NULL
 );
+
+
+CREATE TABLE activity(
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `capital_id` INT UNSIGNED NOT NULL,
+    `title` VARCHAR(100) NOT NULL,
+    `introduction` LONGTEXT NOT NULL,
+    `price` DOUBLE(8, 2) NOT NULL,
+    `description` LONGTEXT NOT NULL,
+    `what_to_expect` LONGTEXT NOT NULL,
+    `transportation` LONGTEXT NOT NULL,
+    `additional_Information` LONGTEXT NOT NULL,
+    `cancellation` VARCHAR(255) NOT NULL
+);
+
+
 ALTER TABLE
     post ADD CONSTRAINT `post_user_id_foreign` FOREIGN KEY(`user_id`) REFERENCES `user`(`id`);
 ALTER TABLE
     post ADD CONSTRAINT `post_capital_id_foreign` FOREIGN KEY(`capital_id`) REFERENCES `capital`(`id`);
+ALTER TABLE
+    activity ADD CONSTRAINT `activity_capital_id_foreign` FOREIGN KEY(`capital_id`) REFERENCES `capital`(`id`);
 
 INSERT INTO capital 
     (name, 
@@ -734,9 +752,107 @@ VALUES
         "To fully embrace Zagreb's essence, indulge in its culinary delights and cherished customs. Savor traditional Croatian dishes like «štrukli», delicate dough filled with cheese or other ingredients, or «pasticada», a slow-cooked beef stew served with gnocchi. Engage with the locals at bustling markets like Dolac Market, where fresh produce, regional delicacies, and local crafts create a lively atmosphere. Immerse yourself in the festive atmosphere of the International Animation Film Festival, a celebration of creative storytelling and animation artistry. As the sun sets over Medvednica Mountain, take a leisurely stroll along the Sava River, where the city lights reflect on the water's surface, embodying the harmonious blend of Zagreb's historical legacy and its artistic expression. Zagreb's allure lies in its ability to be a captivating fusion of tradition and creativity, inviting you to uncover its layers and create cherished memories in the heart of Croatia."
     );
 
--- these are just to use before user creation and login is allowed:
+
 INSERT INTO user (first_name, last_name, username, password)
 VALUES
     ("Maria", "Müller", "maria_mueller", "MariaMueller"),
     ("José", "Ortiz", "jose_ortiz", "JoseOrtiz"),
     ("Alexandra", "Green", "alexandra_green", "AlexandraGreen");
+
+
+
+INSERT INTO activity
+    (capital_id,
+    title,
+    introduction,
+    price,
+    description,
+    what_to_expect,
+    transportation,
+    additional_Information,
+    cancellation)
+
+VALUES
+    (
+        11,
+
+        "Amsterdam Classic Boat Cruise",
+
+        "Cruise down the famous canals of Amsterdam during this 60-minute boat tour, which includes a cheese platter and unlimited beer, wine and soft drink. Hop aboard the classic wooden saloon boat and sit back and enjoy the beautiful city pass you by. See landmarks while nibbling on Dutch cheese and having a drink.",
+
+        32.50,
+
+        "Ages 3-99, max of 35 per group
+         Duration: 1h
+         Start time: Check availability
+         Mobile ticket
+         English",
+
+        "Pass By: Homomonument, Westermarkt, Amsterdam The Netherlands
+         In about one hour, we cruise through the unique Unesco Heritage listed Golden Age canals of Amsterdam. We cruise into the Jordaan, a neighbourhood known for its famous Prinsengracht towards the most romantic Magere Brug (English: Skinny Bridge, we will work on your Dutch pronunciation later), the Amstel river, the 7 bridges, the impressive Golden Bend, and then past the nine streets back to the Anne Frank House.
+         Pass By: Anne Frank House, Prinsengracht 263 - 267 museum entrance Westermarkt 20, 1016 DK Amsterdam The Netherlands
+         Annelies Marie Frank was a Jewish girl from Germany who became known for the diary she wrote during the Second World War when she was in hiding in Amsterdam. She died of exhaustion and / or typhus fever in the Bergen-Belsen concentration camp",
+
+        "Departure details
+          Prinsengracht 263, 1016 GV Amsterdam, Netherlands
+          Location: Anne Frank House. Our boats are located in front of the Anne Frank house at Prinsengracht 263. You will recognize our Flagship crew by the orange clothing. 
+          Prins Hendrikkade 33A, 1012 TM Amsterdam, Netherlands
+          Location: Central Station. Our boats are located right across from Central Station (On the city centre side), at Prins Hendrikkade 33A (next to the entrance of the Victoria Hotel).You will recognize our Flagship crew by the orange clothing. 
+          Return details
+          Returns to original departure point",
+
+        "Confirmation will be received at time of booking
+          Minimum drinking age is 18 years
+          It is colder on the water, please bring warm clothing and don't get surprised by the chilly Dutch weather
+          A fairly big step has to be made into the boat. Our stewards will assist you with this
+          You are always welcome to cancel your ticket if it rains and you'd rather stay inside :)
+          No boats at the dock? Please call us or visit our office at Leliegracht 50D (Just around the corner from the Anne Frank House)
+          No bachelor / birthday party groups allowed, please call us for a private boat option
+          Tour available for free for infants (0-3 years old) 
+          No toilets on board 
+          Please be aware that the points of interest on the route may slightly vary depending on the departure point chosen
+          Most travellers can participate
+          This experience requires good weather. If it's cancelled due to poor weather, you'll be offered a different date or a full refund
+          This tour/activity will have a maximum of 35 travellers",
+
+        "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+    ),
+
+    (
+        11,
+
+        "Treasures of Amsterdam: Coffeeshops & Red Light District Private Tour",
+
+        "Discover the stories and secrets of Amsterdam's most notorious neighborhood on a private tour of the Red Light District. Break away from the curious tourist throngs as a savvy local guide ushers you through hedonistic alleyways and past bars and cafes. Learn the history behind the city’s famously permissive culture and explore hidden spots beyond the glowing red lights and windows.",
+
+        76.00,
+
+        "Ages 14-99
+         Duration: 2h 30m
+         Start time: Check availability
+         Mobile ticket
+         English, Dutch",
+        
+        "Amsterdam's Red Light District lures countless curious tourists to its hedonistic clustering of bars, cafes and scintillating red windows. For locals, it's part of the everyday fabric of the city. Discover the real culture behind this internationally famous destination — apart from the giggles and gawking — on this private 2-hour tour. 
+
+         Meet your local guide in the Beursplein at the time of your choice, and set off on an insightful walking tour, beginning with the famous Warmoesstraat. See some of the unusual offerings that line one of the city's oldest streets, including cannabis 'coffee shops,' fetish boutiques and gay bars. Learn the origins of the Netherlands' famously liberal social attitudes, and hear how the legal sex industry is perceived by locals. 
+
+         Along the way, stroll past the iconic red lights and adult attractions such as the Casa Rosso. Aside from the more mature displays, see other curiosities including a local brewery, Chinatown, the city's narrowest street and the weigh building of Nieumarkt. Feel free to ask all the questions you like to satisfy your curiosity, and come away with a uniquely Dutch perspective on red-light lifestyles.
+
+         Please be advised: Although there is no minimum age, due to the mature content, this tour may not be suitable for children.",
+
+         "Departure details
+          Gravenstraat 13, 1012 NL Amsterdam, Netherlands
+          Cafe De Drie Graefjes American Bakery, behind the New church / Nieuwe Kerk
+          Return details
+          Returns to original departure point",
+
+        "Confirmation will be received at time of booking
+         Travellers should have a moderate physical fitness level
+         This is a private tour/activity. Only your group will participate",
+
+        "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+    )
+
+
+

@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const db = require("../model/helper");
 
+
+
 // /* GET all capitals */
 // router.get("/", async (req, res) => {
 //   console.log(req.query);
@@ -26,6 +28,13 @@ const db = require("../model/helper");
 //     res.status(500).send(error);
 //   }
 // });
+
+
+
+//each router is a different tunnel provides different content
+
+
+//talking to the backend, selecting data from the table and sending to frontend
 
 /* GET all capitals or filtering */
 router.get("/", async (req, res) => {
@@ -54,20 +63,21 @@ router.get("/", async (req, res) => {
 
 /* GET capital by id */
 router.get("/:capital_id", async (req, res) => {
-  const id = req.params.capital_id;
+  const id = req.params.capital_id; //goes to url in line 65 to check for ids
 
   try {
-    const capitalResults = await db(`SELECT * FROM capital WHERE id = ${id};`);
+    const capitalResults = await db(`SELECT * FROM capital WHERE id = ${id};`); //put the table where you ask for data here, send to db
     const commentsResults = await db(`SELECT * FROM post JOIN user ON post.user_id = user.id WHERE post.capital_id = ${id};`);
 
-    const capital = capitalResults.data[0];
+    const capital = capitalResults.data[0];//saves the data from line 69 70
     const comments = commentsResults.data;
 
-    res.send({ capital, comments });
+    res.send({ capital, comments }); //send the data back
   } catch (error) {
-    res.status(500).send(error);
+    res.status(500).send(error); //if failes will be 500 err
   }
 });
+
 
 /* UPDATE population by id */
 router.put("/:capital_id", async (req, res) => {

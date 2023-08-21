@@ -1,7 +1,8 @@
 import "./Home.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom" 
 
 function Home() {
+    //html only, no function
 
     return (
         <div>
@@ -59,7 +60,8 @@ function Home() {
                 <p className="end">
                     Begin your Eurocapi journey now and let the capitals of Europe captivate your senses! 🗺️🏙️🌍
                 </p>
-                <Link className="link" to="/capitals">Start Exploring Capitals</Link>
+                <Link className="link" to="/capitals">Start Exploring Capitals</Link> 
+                {/* the only link to capitals */}
             </div>
         </div>
     )

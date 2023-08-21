@@ -39,14 +39,14 @@ export default function Capital() {
     }, [capital.name]);
 
     const getEuropeanCapitals = async () => {
-        const response = await fetch("/api/capitals");
+        const response = await fetch("/api/capitals"); //fetch
         const data = await response.json();
         setEuropeanCapitals(data);
     };
 
     const getCapital = async () => {
         try {
-            const response = await fetch(`/api/capitals/${id}`);
+            const response = await fetch(`/api/capitals/${id}`); // id tunnel
             const data = await response.json();
 
             setCapital(data.capital);
@@ -144,6 +144,12 @@ export default function Capital() {
                 <button className="go-back">
                     <Link to={"/capitals"}>Go back</Link>
                 </button>
+                
+                {/* button for each city activities  */}
+                <button>
+                <Link to={`/activities/"${id}"`}>Activities</Link>
+                </button>
+
             </div>
         </div>
     )

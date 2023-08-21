@@ -10,19 +10,20 @@ function Capitals() {
     
     useEffect(() => {
         getCapitals();
-    }, []);
+    }, []); //call all capitals from db
 
     const getCapitals = async () => {
-        const response = await fetch("/api/capitals");
+        const response = await fetch("/api/capitals"); //api/capitals is the tunnel here, so i can get data from the db
         const data = await response.json();
         setCapitals(data);
-    };
+    };//fetch
+    // api is the tunnel to connect/communicate frontend & backend, otherwise they cant talk directly
 
     const handleSubmit = async (e) => {
         e.preventDefault();
     
         // Fetch filtered data based on the search term
-        const response = await fetch(`/api/capitals?search=${searchTerm}`);
+        const response = await fetch(`/api/capitals?search=${searchTerm}`); //fetch a different api to get different data
         const data = await response.json();
         setCapitals(data);
         setDisplayAll(true);
@@ -31,7 +32,7 @@ function Capitals() {
     const allCapitals = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("/api/capitals");
+        const response = await fetch("/api/capitals"); //3rd fetch
         const data = await response.json();
         setCapitals(data);
         setDisplayAll(false);
