@@ -7,7 +7,11 @@ import Capital from "./components/Capital"
 import Activities from "./components/Activities"
 
 
+
 function App() {
+
+  
+
 
   return (
     <div>
@@ -25,10 +29,8 @@ function App() {
           <Link to="/addpost">Add Post</Link>
         </div>
 
-          {/* activities link below 这跟我用button有什么区别呢*/}
-        <div>
-          <Link to="/activities">Activities</Link>
-        </div>
+
+
 
       </nav>
       <Routes>  
@@ -38,7 +40,8 @@ function App() {
         <Route path="/capitals" element={<Capitals/>} />
         <Route path="/capitals/:id" element={<Capital/>} />
         <Route path="/addpost" element={<AddPost/>} />
-        <Route path="/activities" element={<Activities/>} />
+        <Route path="/activities/:id" element={<Activities/>} />
+        {/* <Route path="/actid/:id" element={<Activity/>} /> */}
         
       </Routes>
       <footer>

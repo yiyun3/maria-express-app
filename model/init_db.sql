@@ -43,7 +43,9 @@ CREATE TABLE post(
 CREATE TABLE activity(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `capital_id` INT UNSIGNED NOT NULL,
+    `city`VARCHAR(100) NOT NULL,
     `title` VARCHAR(100) NOT NULL,
+    `url` VARCHAR(255) NOT NULL,
     `introduction` LONGTEXT NOT NULL,
     `price` DOUBLE(8, 2) NOT NULL,
     `description` LONGTEXT NOT NULL,
@@ -763,7 +765,9 @@ VALUES
 
 INSERT INTO activity
     (capital_id,
+    city,
     title,
+    url,
     introduction,
     price,
     description,
@@ -774,9 +778,13 @@ INSERT INTO activity
 
 VALUES
     (
-        11,
+        1,
+
+        "Amsterdam",
 
         "Amsterdam Classic Boat Cruise",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/3a/8a/80.jpg",
 
         "Cruise down the famous canals of Amsterdam during this 60-minute boat tour, which includes a cheese platter and unlimited beer, wine and soft drink. Hop aboard the classic wooden saloon boat and sit back and enjoy the beautiful city pass you by. See landmarks while nibbling on Dutch cheese and having a drink.",
 
@@ -819,11 +827,15 @@ VALUES
     ),
 
     (
-        11,
+        1,
+
+        "Amsterdam",
 
         "Treasures of Amsterdam: Coffeeshops & Red Light District Private Tour",
 
-        "Discover the stories and secrets of Amsterdam's most notorious neighborhood on a private tour of the Red Light District. Break away from the curious tourist throngs as a savvy local guide ushers you through hedonistic alleyways and past bars and cafes. Learn the history behind the city’s famously permissive culture and explore hidden spots beyond the glowing red lights and windows.",
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/d8/93.jpg",
+
+        "Discover the stories and secrets of Amsterdam's most notorious neighborhood on a private tour of the Red Light District. Break away from the curious tourist throngs as a savvy local guide ushers you through hedonistic alleyways and past bars and cafes. Learn the history behind the city's famously permissive culture and explore hidden spots beyond the glowing red lights and windows.",
 
         76.00,
 
@@ -852,6 +864,137 @@ VALUES
          This is a private tour/activity. Only your group will participate",
 
         "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+    ),
+    (
+        2,
+
+        "Andorra la Vella",
+
+        "The Original Three Countries in One Day: France, Andorra, Spain from Barcelona",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/ee/ba.jpg",
+
+        "Visit Andorra, France, and Spain in a single day on a tour from Barcelona that takes in historic architecture, gorgeous mountain landscapes, and three distinctive cultures. If your time is limited, choosing a guided tour ensures you see more than you would on your own, from breakfast in Spain to lunch in a traditional French restaurant (own expense), with a series of fascinating sightseeing stops throughout the day.",
+
+        139.00,
+
+        "Ages 0-99, max of 20 per group
+        Duration: 12h 30m
+        Start time: Check availability
+        Mobile ticket
+        English",
+
+        "Meet a guide in central Barcelona, then travel to the Spanish village of Baga, where you have views of the rocky peaks in Cadi-Moixero National Park. Tour the village's square and medieval church. Then, head deeper into the countryside toward the French border. 
+         Next, stop at the ancient spa town of Ax-Les-Thermes. Discover some natural fountains, soak your feet in the healing waters, and enjoy the free time to browse local artisan shops and explore this traditional French village. 
+         Meet your guide back at the bus, climb aboard, and travel to Andorra. Travel through the scenic Pyrenees Alps on route to Andorra la Vella. Along the route, cross the Pas de la Casa, a high mountain pass with some ample photo opportunities.
+         Descend into Andorra, stopping off at a mountain valley to explore tiny stone huts that dot the mountainside and an ancient Roman church stands. 
+         From here you head down the valleys into Andorra de la Vella. This will be your last stop of the day, but you have enough time to do a little bit of duty-free shopping and grab a quick bargain. 
+         Begin the return to Barcelona in the late afternoon, pausing for a drink in Coll de Nargo along the way and finishing the day at a central location in Barcelona.",
+
+         "Departure details
+          C/ Palau de la Música, 1, 08003 Barcelona, Spain
+          Explore Catalunya Office. We are located in a little alley between the Palau de la Música building and Via Laietana, opposite the Palau de la Música's cafeteria.
+          Return details
+          Arco de Triunfo de Barcelona, Passeig de Lluís Companys, 08003 Barcelona, Spain
+          Depending on the size of your group, and the traffic conditions on the day of the tour, you will return either to the main office or to Place Catalunya, which is just an easy 3-5 minute walk away.",
+
+          "Confirmation will be received at time of booking
+          A current valid passport is required on the day of travel. You MUST confirm and obtain any visa requirements prior to border crossing. All visa requirements are the sole responsibility of the traveler.
+          Please bring a towel if you plan to use the spa water in Ax Les Thermes
+          This tour operates in English only
+          Most travellers can participate
+          This experience requires good weather. If it's cancelled due to poor weather, you'll be offered a different date or a full refund
+          This tour/activity will have a maximum of 20 travellers",
+
+          "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+
+    ),
+    (
+        2,
+
+        "Andorra la Vella",
+
+        "Andorra la Vella Instagram Photoshoot By Local Professionals",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/95.jpg",
+
+        "Excited about the upcoming trip? Feel the happiness even after it's over - via VsnapU. Preserve the moments by adding a Photoshoot activity to your vacation.
+         Imagine a professional photographer coming to the most exotic location of your itinerary. Be involved in this fun activity of posing and doing crazy things while he captures your expressions with your loved ones.
+         See that smile even after months - adore the pictures and share it with the world. What better than having digital copies which you can float on Facebook, Insta, Whatsapp?
+         Simply book a photoshoot online and find the photographer smiling on your desired date and time. We make sure that the exotic landscape of the destination is captures along with you to give the grand feeling.
+         Book us for Honeymoon Trips/ Birthdays/ Anniversaries/ or any other commercial events. Make it a memory for a lifetime.",
+
+        326.47,
+
+        "Ages 0-120
+        Duration: 1h 30m
+        Start time: Check availability
+        Mobile ticket
+        English",
+
+        "Book the shoot online on desired Date and Time.
+        Assigned photographer calls you a day prior to shoot, confirming the place or any changes in travel.
+        Photographer reaches the location for a 1 hour shoot.
+        50-80 Images are Clicked.
+        Top 35 pictures are edited by professionals.
+        Get the drive link / cloud link to your digital copies via mail / Whatsapp / Text Message
+        Link is valid for 365 days.
+        Get a chance to be featured on our social media pages.",
+
+        "Departure details
+        AD500 Andorra la Vella, Andorra
+        Return details
+        Returns to original departure point",
+
+        "Confirmation will be received at time of booking
+        No heart problems or other serious medical conditions
+        Most travellers can participate
+        This experience requires good weather. If it's cancelled due to poor weather, you'll be offered a different date or a full refund
+        This is a private tour/activity. Only your group will participate",
+
+        "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
+
+    ),
+    (
+        5,
+
+        "Berlin",
+
+        "Street Art Tour - Off The Grid",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6c.jpg",
+
+        "Finding the best street murals can be tough in a new city; however, by taking this walking street art tour, you can discover the best of the city's photo-friendly street art with ease. Benefit from your local artist-guide's insight into the history, techniques, and street art secrets as you admire a mix of well-known and underrated pieces you might not otherwise find.",
+
+        20.00,
+
+        "Ages 0-99, max of 20 per group
+         Duration: 3h
+         Start time: Check availability
+         Mobile ticket
+         German, English",
+
+         "Itinerary
+          This is a typical itinerary for this product
+          Pass By: Berlin, Berlin
+          Enjoy a great inspirational Street Art Tour through the districts of Friedrichshain and Kreuzberg ",
+
+        "Departure details
+         Revaler Str. 2, 10243 Berlin, Germany
+         Find your guide in front of the REWE supermarket at 2PM.
+         Return details
+         Wrangelkiez, 10997 Berlin, Germany
+         we will finish in Kreuzberg close to the U1 line",
+
+        "Confirmation will be received at time of booking
+         Good walking shoes.
+         An umbrella if raining.
+         Guests should have a metro ticket as public transport is used through out the tour.
+         Most travellers can participate
+         This experience requires a minimum number of travellers. If it's cancelled because the minimum isn't met, you'll be offered a different date/experience or a full refund
+         This tour/activity will have a maximum of 20 travellers",
+
+         "For a full refund, cancel at least 24 hours in advance of the start date of the experience."
     )
 
 

@@ -11,6 +11,7 @@ var actRouter = require('./routes/activity');
 
 
 
+
 var app = express();
 
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/capitals', indexRouter);
 app.use('/api/users', usersRouter);
 //new router here
-app.use('./api/activity', actRouter);
+app.use('/api/activity', actRouter);
+
 
 module.exports = app;

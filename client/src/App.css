@@ -40,3 +40,31 @@ footer {
 button:hover{
   cursor: pointer;
 }
+
+
+
+
+
+
+
+/* modalcss */
+
+.modal {
+  position: fixed; /* Fix position to the top left of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  display: flex; /* Enable flex */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+.modal-content {
+  background-color: white; /* Modal content background color */
+  padding: 20px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  opacity: 80%;
+  margin-bottom: 2cm;
+  
+}

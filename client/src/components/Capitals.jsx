@@ -39,6 +39,7 @@ function Capitals() {
         setSearchTerm("");
     };
 
+
     return (
         <div id="Capitals">
             <div className="main-capitals">

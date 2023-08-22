@@ -99,12 +99,12 @@ export default function Capital() {
                     </div>
 
                     <div>
-                        <h3 classname="description-title">{capital.description_title}</h3>
-                        <h4 classname="description-subtitle">{capital.description_subtitle_1}</h4>
+                        <h3 className="description-title">{capital.description_title}</h3>
+                        <h4 className="description-subtitle">{capital.description_subtitle_1}</h4>
                         <p className="description-text">{capital.description_text_1}</p>
-                        <h4 classname="description-subtitle">{capital.description_subtitle_2}</h4>
+                        <h4 className="description-subtitle">{capital.description_subtitle_2}</h4>
                         <p className="description-text">{capital.description_text_2}</p>
-                        <h4 classname="description-subtitle">{capital.description_subtitle_3}</h4>
+                        <h4 className="description-subtitle">{capital.description_subtitle_3}</h4>
                         <p className="description-text">{capital.description_text_3}</p>
                     </div>
 
@@ -147,7 +147,7 @@ export default function Capital() {
                 
                 {/* button for each city activities  */}
                 <button>
-                <Link to={`/activities/"${id}"`}>Activities</Link>
+                <Link to={`/activities/${capital.id}`}>Activities</Link>
                 </button>
 
             </div>
