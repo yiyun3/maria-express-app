@@ -1,4 +1,4 @@
-import { useState, useEffect, useHistory} from "react";
+import { useState, useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
 import"./Activity.css";
 
@@ -7,12 +7,6 @@ function Activity() {
     const [activity, setActivity] = useState([]);
 
 
-    const MyComponent = () => {
-        const history = useHistory();
-      
-    const goBack = () => {
-          history.goBack(); // 使用 goBack 方法返回上一页
-    }};
 
     let {id} = useParams();
 
