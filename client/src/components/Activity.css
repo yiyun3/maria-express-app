@@ -1,0 +1,96 @@
+#Activity {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+   
+   
+    text-align:left;
+    position: inherit;
+    color: #22223b;
+    
+}
+
+.white-text1 {
+    color: white;
+    padding-bottom: 10px;
+    height: 250px;
+}
+
+.gridImage1 {
+    width: 103vw;
+    height: 350px;
+    object-fit: cover;
+    margin-top: -25px;
+    position: absolute;
+    z-index: -5;
+    filter: brightness(50%);
+}
+
+
+
+.white-text {
+    color: white;
+    padding-bottom: 10px;
+    height: 275px;
+}
+
+.act-title{
+    margin-top: 70px;
+    font-size: 9.5vw;
+    position: flex;
+}
+
+.main-act {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80vw;
+}
+
+.sideImg {
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 1px 5px 8px #c9ada7;
+    background-color: #f2e9e4;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    margin-top: 25rem;
+    width: 15rem;
+    height:70rem;
+    padding: 5px;
+    position: static;
+   
+    
+}
+
+
+.go-back {
+    margin: 20px;
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: #9a8c98;
+    text-decoration: none;
+    color: white;
+}
+
+.go-back a:visited {
+    color: white;
+}
+
+h3{
+    margin: 35px auto 10px auto;
+    text-align: left;
+}
+
+.bodyActs {
+    margin: auto auto 35px auto;
+    text-align: left;
+    
+}
+
+.price {
+    font-size: 20px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体粗细 */
+   
+  }

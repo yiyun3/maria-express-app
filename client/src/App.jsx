@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import { Routes, Route, Link } from "react-router-dom"
 import Capital from "./components/Capital"
 import Activities from "./components/Activities"
+import Activity from "./components/Activity"
 
 
 
@@ -41,7 +42,7 @@ function App() {
         <Route path="/capitals/:id" element={<Capital/>} />
         <Route path="/addpost" element={<AddPost/>} />
         <Route path="/activities/:id" element={<Activities/>} />
-        {/* <Route path="/actid/:id" element={<Activity/>} /> */}
+        <Route path="/activity/:id" element={<Activity/>} />
         
       </Routes>
       <footer>

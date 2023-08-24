@@ -122,6 +122,21 @@ button a:link {
     color: white;
 }
 
+.go-back1 {
+    margin: 20px;
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: #9a8c98;
+    text-decoration: none;
+    color: white;
+}
+
+.go-back1 a:visited {
+    color: white;
+}
+
 .important-message {
     color: red;
 }

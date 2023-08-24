@@ -45,10 +45,21 @@ CREATE TABLE activity(
     `capital_id` INT UNSIGNED NOT NULL,
     `city`VARCHAR(100) NOT NULL,
     `title` VARCHAR(100) NOT NULL,
-    `url` VARCHAR(255) NOT NULL,
+    `url1` VARCHAR(255) NOT NULL,
+    `url2` VARCHAR(255) NOT NULL,
+    `url3` VARCHAR(255) NOT NULL,
+    `url4` VARCHAR(255) NOT NULL,
+    `url5` VARCHAR(255) NOT NULL,
+    `url6` VARCHAR(255) NOT NULL,
+    `url7` VARCHAR(255) NOT NULL,
+    `url8` VARCHAR(255) NOT NULL,
     `introduction` LONGTEXT NOT NULL,
     `price` DOUBLE(8, 2) NOT NULL,
-    `description` LONGTEXT NOT NULL,
+    `description1` VARCHAR(255) NOT NULL,
+    `description2` VARCHAR(255) NOT NULL,
+    `description3` VARCHAR(255) NOT NULL,
+    `description4` VARCHAR(255) NOT NULL,
+    `description5` VARCHAR(255) NOT NULL,
     `what_to_expect` LONGTEXT NOT NULL,
     `transportation` LONGTEXT NOT NULL,
     `additional_Information` LONGTEXT NOT NULL,
@@ -767,10 +778,21 @@ INSERT INTO activity
     (capital_id,
     city,
     title,
-    url,
+    url1,
+    url2,
+    url3,
+    url4,
+    url5,
+    url6,
+    url7,
+    url8,
     introduction,
     price,
-    description,
+    description1,
+    description2,
+    description3,
+    description4,
+    description5,
     what_to_expect,
     transportation,
     additional_Information,
@@ -786,15 +808,33 @@ VALUES
 
         "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/3a/8a/80.jpg",
 
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/3a/8a/b4.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/e6/b0/67.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/44/4e/08.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/80/26/9f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/3a/8a/b1.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/5b/8d/58.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/e6/b9/d4.jpg",
+
         "Cruise down the famous canals of Amsterdam during this 60-minute boat tour, which includes a cheese platter and unlimited beer, wine and soft drink. Hop aboard the classic wooden saloon boat and sit back and enjoy the beautiful city pass you by. See landmarks while nibbling on Dutch cheese and having a drink.",
 
         32.50,
 
-        "Ages 3-99, max of 35 per group
-         Duration: 1h
-         Start time: Check availability
-         Mobile ticket
-         English",
+        "Ages 3-99, max of 35 per group",
+
+        "Duration: 1h",
+        
+        "Start time: Check availability",
+
+        "Mobile ticket",
+
+        "English",
 
         "Pass By: Homomonument, Westermarkt, Amsterdam The Netherlands
          In about one hour, we cruise through the unique Unesco Heritage listed Golden Age canals of Amsterdam. We cruise into the Jordaan, a neighbourhood known for its famous Prinsengracht towards the most romantic Magere Brug (English: Skinny Bridge, we will work on your Dutch pronunciation later), the Amstel river, the 7 bridges, the impressive Golden Bend, and then past the nine streets back to the Anne Frank House.
@@ -835,15 +875,33 @@ VALUES
 
         "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/d8/93.jpg",
 
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a3/99/dc.jpg",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/1b/86/f8/20190903-182211-largejpg.jpg?w=1100&h=-1&s=1",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/6f/d8/94.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/a3/9b/5f.jpg",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/1b/86/f9/20190903-182744-largejpg.jpg?w=1100&h=-1&s=1",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/1b/86/f7/20190903-175455-largejpg.jpg?w=1100&h=-1&s=1",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/1b/86/f1/20190903-171127-largejpg.jpg?w=1100&h=-1&s=1",
+
         "Discover the stories and secrets of Amsterdam's most notorious neighborhood on a private tour of the Red Light District. Break away from the curious tourist throngs as a savvy local guide ushers you through hedonistic alleyways and past bars and cafes. Learn the history behind the city's famously permissive culture and explore hidden spots beyond the glowing red lights and windows.",
 
         76.00,
 
-        "Ages 14-99
-         Duration: 2h 30m
-         Start time: Check availability
-         Mobile ticket
-         English, Dutch",
+        "Ages 14-99",
+
+        "Duration: 2h 30m",
+
+        "Start time: Check availability",
+
+        "Mobile ticket",
+
+        "English, Dutch",
         
         "Amsterdam's Red Light District lures countless curious tourists to its hedonistic clustering of bars, cafes and scintillating red windows. For locals, it's part of the everyday fabric of the city. Discover the real culture behind this internationally famous destination — apart from the giggles and gawking — on this private 2-hour tour. 
 
@@ -874,15 +932,33 @@ VALUES
 
         "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/ee/ba.jpg",
 
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/14/0c/f7.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/e7/63.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/ee/ba.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/14/03/2e.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/eb/97.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/36/00/0f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/13/ee/ba.jpg",
+
         "Visit Andorra, France, and Spain in a single day on a tour from Barcelona that takes in historic architecture, gorgeous mountain landscapes, and three distinctive cultures. If your time is limited, choosing a guided tour ensures you see more than you would on your own, from breakfast in Spain to lunch in a traditional French restaurant (own expense), with a series of fascinating sightseeing stops throughout the day.",
 
         139.00,
 
-        "Ages 0-99, max of 20 per group
-        Duration: 12h 30m
-        Start time: Check availability
-        Mobile ticket
-        English",
+        "Ages 0-99, max of 20 per group",
+
+        "Duration: 12h 30m",
+
+        "Start time: Check availability",
+
+        "Mobile ticket",
+
+        "English",
 
         "Meet a guide in central Barcelona, then travel to the Spanish village of Baga, where you have views of the rocky peaks in Cadi-Moixero National Park. Tour the village's square and medieval church. Then, head deeper into the countryside toward the French border. 
          Next, stop at the ancient spa town of Ax-Les-Thermes. Discover some natural fountains, soak your feet in the healing waters, and enjoy the free time to browse local artisan shops and explore this traditional French village. 
@@ -918,6 +994,20 @@ VALUES
 
         "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/95.jpg",
 
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/8f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/8f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/8f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/a7.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/8f.jpg",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/23/5f/32/caption.jpg?w=1400&h=-1&s=1",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3a/f0/8f.jpg",
+
         "Excited about the upcoming trip? Feel the happiness even after it's over - via VsnapU. Preserve the moments by adding a Photoshoot activity to your vacation.
          Imagine a professional photographer coming to the most exotic location of your itinerary. Be involved in this fun activity of posing and doing crazy things while he captures your expressions with your loved ones.
          See that smile even after months - adore the pictures and share it with the world. What better than having digital copies which you can float on Facebook, Insta, Whatsapp?
@@ -926,11 +1016,15 @@ VALUES
 
         326.47,
 
-        "Ages 0-120
-        Duration: 1h 30m
-        Start time: Check availability
-        Mobile ticket
-        English",
+        "Ages 0-120",
+
+        "Duration: 1h 30m",
+
+        "Start time: Check availability",
+
+        "Mobile ticket",
+
+        "English",
 
         "Book the shoot online on desired Date and Time.
         Assigned photographer calls you a day prior to shoot, confirming the place or any changes in travel.
@@ -964,15 +1058,33 @@ VALUES
 
         "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6c.jpg",
 
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/71/e2/18.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6e.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6c.jpg",
+
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/a9/0e/bd/street-art-tour-off-the.jpg?w=1100&h=-1&s=1",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6f.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6c.jpg",
+
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/3e/e5/6d.jpg",
+
         "Finding the best street murals can be tough in a new city; however, by taking this walking street art tour, you can discover the best of the city's photo-friendly street art with ease. Benefit from your local artist-guide's insight into the history, techniques, and street art secrets as you admire a mix of well-known and underrated pieces you might not otherwise find.",
 
         20.00,
 
-        "Ages 0-99, max of 20 per group
-         Duration: 3h
-         Start time: Check availability
-         Mobile ticket
-         German, English",
+        "Ages 0-99, max of 20 per group",
+
+        "Duration: 3h",
+
+        "Start time: Check availability",
+
+        "Mobile ticket",
+
+        "German, English",
 
          "Itinerary
           This is a typical itinerary for this product

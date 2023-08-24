@@ -53,24 +53,25 @@ function Activities() {
 
 
     return (
-        <div style={{marginTop: "100px", marginBottom:"100px"}} id= "Activities">
+        <div id= "Activities">  
+        {/* style={{marginTop: "100px", marginBottom:"100px"}} 需要在div里直接改margin的时候参考这个*/}
 
            {/* {activities.map(e => e.price)} 单个的map */}
             {/* <p> {e.price}$ per person </p> */}
              {/* {activities.map( e => ( ) */}
 
         
-            <div className="section1">
-                <h2>Activities in {activities.length > 0 ? activities[0].city : ""} </h2>
+            <div className="acts">
+                <h2 className="euro-acts">Activities in {activities.length > 0 ? activities[0].city : ""} </h2>
       
                     {/* grid */}
                     <div className="card-grid2">
                     {activities.map((e) => (
                         <div key={e.id} className="card2">
-                            <img src={e.url} alt="Image" className="card-img2" />
-                            <h3 className="act-title">{e.title}</h3>
+                            <img src={e.url1} alt="Image" className="card-img2" />
+                            <h3 className="card-title2">{e.title}</h3>
                             {/* <h3 className="act-description">{capital.country}</h3> */}
-                            <button className="act-btn">
+                            <button className="card-btn2">
                                 <Link to={`/activity/${e.id}`}>Discover</Link>
                             </button>
                         </div>
@@ -80,22 +81,7 @@ function Activities() {
             </div>
 
 
-            <div className="section2">
-            {activities.map((e) => (
-                <div key={e.id}>
-                    <h3 className="act-title">{e.title}</h3>
-                </div>
-
-                
-              
-            ))}
-            </div>
-
-            {/* <div>
-            {activities.length > 0 && 
-                    <p>Introduction <br /> {e.introduction}</p>
-            </div> */}
-
+            
            
          
               

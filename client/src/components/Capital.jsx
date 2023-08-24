@@ -74,6 +74,7 @@ export default function Capital() {
     return (
         <div id="Capital">
             <div className="capital-div">
+                {/* 左侧栏 */}
                 <ul className="capital-list">
                     {europeanCapitals.map((c) => (
                         <li key={c.id}>
@@ -146,7 +147,7 @@ export default function Capital() {
                 </button>
                 
                 {/* button for each city activities  */}
-                <button>
+                <button className="go-back1">
                 <Link to={`/activities/${capital.id}`}>Activities</Link>
                 </button>
 
